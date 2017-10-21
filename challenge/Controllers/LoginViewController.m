@@ -81,6 +81,9 @@
         if (error) {
             [SVProgressHUD showErrorWithStatus:error.localizedDescription];
         }
+        else if (response[@"_message"]) {
+            [SVProgressHUD showErrorWithStatus:response[@"_message"]];
+        }
         else {
             [SVProgressHUD dismiss];
             
