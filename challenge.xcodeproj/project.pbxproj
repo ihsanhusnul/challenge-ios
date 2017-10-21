@@ -18,6 +18,8 @@
 		489F67211F9AA6DE00925858 /* ic_twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 489F671F1F9AA6DD00925858 /* ic_twitter.png */; };
 		489F67221F9AA6DE00925858 /* ic_fb.png in Resources */ = {isa = PBXBuildFile; fileRef = 489F67201F9AA6DE00925858 /* ic_fb.png */; };
 		489F67271F9AB58C00925858 /* UserModelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 489F67261F9AB58C00925858 /* UserModelView.m */; };
+		489F672B1F9ACC4900925858 /* LovelistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 489F672A1F9ACC4900925858 /* LovelistViewController.m */; };
+		489F672F1F9ACFBC00925858 /* ic_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 489F672E1F9ACFBC00925858 /* ic_back.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,9 @@
 		489F67201F9AA6DE00925858 /* ic_fb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_fb.png; sourceTree = "<group>"; };
 		489F67251F9AB58C00925858 /* UserModelView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserModelView.h; sourceTree = "<group>"; };
 		489F67261F9AB58C00925858 /* UserModelView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserModelView.m; sourceTree = "<group>"; };
+		489F67291F9ACC4900925858 /* LovelistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LovelistViewController.h; sourceTree = "<group>"; };
+		489F672A1F9ACC4900925858 /* LovelistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LovelistViewController.m; sourceTree = "<group>"; };
+		489F672E1F9ACFBC00925858 /* ic_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_back.png; sourceTree = "<group>"; };
 		4EE4F940921FC52E0B52127E /* libPods-challenge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-challenge.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		51B80EF568AF420A04C800C2 /* Pods-challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-challenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-challenge/Pods-challenge.debug.xcconfig"; sourceTree = "<group>"; };
 		ED7AF22E4BCA6D702600BB06 /* Pods-challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-challenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-challenge/Pods-challenge.release.xcconfig"; sourceTree = "<group>"; };
@@ -107,6 +112,8 @@
 			children = (
 				489F67181F9A9AD000925858 /* LoginViewController.h */,
 				489F67191F9A9AD000925858 /* LoginViewController.m */,
+				489F67291F9ACC4900925858 /* LovelistViewController.h */,
+				489F672A1F9ACC4900925858 /* LovelistViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -139,6 +146,7 @@
 		489661011F9A984700CE6D41 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				489F672E1F9ACFBC00925858 /* ic_back.png */,
 				489F67201F9AA6DE00925858 /* ic_fb.png */,
 				489F671F1F9AA6DD00925858 /* ic_twitter.png */,
 				489661021F9A99D100CE6D41 /* Logo-Prelo.jpg */,
@@ -218,6 +226,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				489F672F1F9ACFBC00925858 /* ic_back.png in Resources */,
 				489F67211F9AA6DE00925858 /* ic_twitter.png in Resources */,
 				489660F21F9A978700CE6D41 /* LaunchScreen.storyboard in Resources */,
 				489661031F9A99D100CE6D41 /* Logo-Prelo.jpg in Resources */,
@@ -288,6 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				489F672B1F9ACC4900925858 /* LovelistViewController.m in Sources */,
 				489660F51F9A978700CE6D41 /* main.m in Sources */,
 				489F67271F9AB58C00925858 /* UserModelView.m in Sources */,
 				489660E71F9A978700CE6D41 /* AppDelegate.m in Sources */,

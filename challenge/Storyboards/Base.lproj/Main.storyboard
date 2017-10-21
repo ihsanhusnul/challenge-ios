@@ -41,7 +41,7 @@
                                     <constraint firstAttribute="width" secondItem="uGS-Mu-bZt" secondAttribute="height" multiplier="15:8" id="bg3-HA-5Cs"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="applicant" placeholder="Email atau Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RQx-Mv-YVH">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email atau Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RQx-Mv-YVH">
                                 <rect key="frame" x="20" y="232" width="335" height="35"/>
                                 <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -51,7 +51,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="password" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WSn-uK-4kr">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WSn-uK-4kr">
                                 <rect key="frame" x="20" y="282" width="335" height="35"/>
                                 <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -175,11 +175,40 @@
                         <outlet property="loginBtn" destination="ZQd-wd-X5V" id="I16-rf-NPG"/>
                         <outlet property="passwordField" destination="WSn-uK-4kr" id="bgK-vY-RRQ"/>
                         <outlet property="usernameField" destination="RQx-Mv-YVH" id="Enw-OO-Fj1"/>
+                        <segue destination="VP3-oU-Il3" kind="show" identifier="segueToLovelist" id="42c-mL-wEQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pVF-5c-oww" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-654" y="134"/>
+        </scene>
+        <!--Lovelist-->
+        <scene sceneID="EE8-0R-jKW">
+            <objects>
+                <viewController title="Lovelist" id="VP3-oU-Il3" customClass="LovelistViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="veY-GI-j6j">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Barang yang kamu sukai akan tampil di sini" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ws2-LT-a99">
+                                <rect key="frame" x="20" y="104" width="335" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <color key="textColor" red="0.25882352939999997" green="0.61176470589999998" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ws2-LT-a99" firstAttribute="top" secondItem="vMP-wW-0Fm" secondAttribute="top" constant="40" id="bNe-Ba-lfg"/>
+                            <constraint firstItem="vMP-wW-0Fm" firstAttribute="trailing" secondItem="Ws2-LT-a99" secondAttribute="trailing" constant="20" id="ed1-aC-Pys"/>
+                            <constraint firstItem="Ws2-LT-a99" firstAttribute="leading" secondItem="vMP-wW-0Fm" secondAttribute="leading" constant="20" id="xFR-ig-hDm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vMP-wW-0Fm"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DHw-dC-Tb5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="170" y="134"/>
         </scene>
     </scenes>
     <resources>
