@@ -85,8 +85,9 @@
             [SVProgressHUD dismiss];
             
             if ([UserModelView userToken]) {
-                NSLog(@"%@", [UserModelView userToken]);
-                // goto lovelist
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self performSegueWithIdentifier:@"segueToLovelist" sender:nil];
+                });
             }
         }
     }];
