@@ -7,6 +7,8 @@
 //
 
 #import "LoginViewController.h"
+#import <SVProgressHUD/SVProgressHUD.h>
+#import "UserModelView.h"
 
 @interface LoginViewController () {
     
@@ -51,7 +53,62 @@
     loginBtn.layer.borderColor = [UIColor whiteColor].CGColor;
     loginBtn.layer.borderWidth = 1;
 }
+- (NSString*)loginValidates {
+    NSMutableArray *errors = [NSMutableArray new];
+    
+    if (usernameField.text.length == 0) {
+        [errors addObject:@"- Username tidak boleh kosong."];
+    }
+    if (usernameField.text.length < 4) {
+        [errors addObject:@"- Username minimal 4 karakter."];
+    }
+    
+    if (passwordField.text.length < 6) {
+        [errors addObject:@"- Password minimal 6 karakter."];
+    }
+    
+    if (errors.count == 0) {
+        return nil;
+    }
+    else {
+        return [errors componentsJoinedByString:@"\n"];
+    }
+}
+- (void)doLoginUser {
+    [SVProgressHUD showWithStatus:@"SIlahan Tunggu..."];
+    [UserModelView requestLogin:usernameField.text withPassword:passwordField.text completionHandler:^(NSDictionary *response, NSError *error) {
+        
+        if (error) {
+            [SVProgressHUD showErrorWithStatus:error.localizedDescription];
+        }
+        else {
+            [SVProgressHUD dismiss];
+            
+            if ([UserModelView userToken]) {
+                NSLog(@"%@", [UserModelView userToken]);
+                // goto lovelist
+            }
+        }
+    }];
+}
 
 #pragma mark - IBAction
+- (IBAction)didTapLoginBtn:(id)sender {
+    NSString *messages = [self loginValidates];
+    
+    if (messages) {
+        UIAlertController *control = [UIAlertController alertControllerWithTitle:@"Terjadi Kesalahan" message:messages preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+            [control dismissViewControllerAnimated:YES completion:nil];
+        }];
+        
+        [control addAction:okAction];
+        [self presentViewController:control animated:YES completion:nil];
+    }
+    else {
+        [self doLoginUser];
+    }
+}
 
 @end
