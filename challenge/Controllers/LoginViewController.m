@@ -81,12 +81,16 @@
         if (error) {
             [SVProgressHUD showErrorWithStatus:error.localizedDescription];
         }
+        else if (response[@"_message"]) {
+            [SVProgressHUD showErrorWithStatus:response[@"_message"]];
+        }
         else {
             [SVProgressHUD dismiss];
             
             if ([UserModelView userToken]) {
-                NSLog(@"%@", [UserModelView userToken]);
-                // goto lovelist
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self performSegueWithIdentifier:@"segueToLovelist" sender:nil];
+                });
             }
         }
     }];
