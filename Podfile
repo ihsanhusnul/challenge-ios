@@ -8,5 +8,6 @@ target 'challenge' do
   # Pods for challenge
 
   pod 'SVProgressHUD'
+  pod 'AFNetworking'
 
 end

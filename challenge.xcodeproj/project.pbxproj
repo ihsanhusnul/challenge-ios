@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		24A3D191634C759916875FA5 /* libPods-challenge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EE4F940921FC52E0B52127E /* libPods-challenge.a */; };
+		4874DCE71FA1C4B500469E36 /* LovelistModelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4874DCE61FA1C4B500469E36 /* LovelistModelView.m */; };
 		489660E71F9A978700CE6D41 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 489660E61F9A978700CE6D41 /* AppDelegate.m */; };
 		489660ED1F9A978700CE6D41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 489660EB1F9A978700CE6D41 /* Main.storyboard */; };
 		489660EF1F9A978700CE6D41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 489660EE1F9A978700CE6D41 /* Assets.xcassets */; };
@@ -23,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4874DCE51FA1C4B500469E36 /* LovelistModelView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LovelistModelView.h; sourceTree = "<group>"; };
+		4874DCE61FA1C4B500469E36 /* LovelistModelView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LovelistModelView.m; sourceTree = "<group>"; };
 		489660E21F9A978700CE6D41 /* challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = challenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		489660E51F9A978700CE6D41 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		489660E61F9A978700CE6D41 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -103,6 +106,8 @@
 			children = (
 				489F67251F9AB58C00925858 /* UserModelView.h */,
 				489F67261F9AB58C00925858 /* UserModelView.m */,
+				4874DCE51FA1C4B500469E36 /* LovelistModelView.h */,
+				4874DCE61FA1C4B500469E36 /* LovelistModelView.m */,
 			);
 			path = ModelViews;
 			sourceTree = "<group>";
@@ -301,6 +306,7 @@
 				489660F51F9A978700CE6D41 /* main.m in Sources */,
 				489F67271F9AB58C00925858 /* UserModelView.m in Sources */,
 				489660E71F9A978700CE6D41 /* AppDelegate.m in Sources */,
+				4874DCE71FA1C4B500469E36 /* LovelistModelView.m in Sources */,
 				489F671A1F9A9AD000925858 /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
